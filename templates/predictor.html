@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor</title>
+        <!--BOORTSTRAP 4-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css">
+        <!--FONTS-->
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet"> 
+        <!--MAIN CSS-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }} " type="text/css">
+</head>
+<body>
+    <form action="/UploaderPredictor" method="POST" enctype="multipart/form-data">
+        <label for="files" class="btn" style="color:rgb(255, 255, 255);">Select image</label>
+        <input id="files" style="visibility:hidden;" type="file" name="Imagen">
+        <input type="submit">
+    </form>
+</body>
+</html>

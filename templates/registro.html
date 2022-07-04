@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face recognition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--BOORTSTRAP 4-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css">
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet"> 
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }} " type="text/css">
+</head>
+<body>
+    <main class="container p-4">
+        <h1 class="display-4 text-center title mt-4">Registrar usuario</h1>
+        <div class="row">
+            <div class="col-md-4 offset-md-4 my-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <form action="/Registro/Verificacion" method="POST">
+                            <div class="form-group">
+                                <input type="name" name="name" placeholder="Name" class="form-control" autofocus title="Es obligatorio ingresar el nombre de usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email" class="form-control" autofocus title="Es obligatorio ingresar el email" required>
+                            </div>
+                            <div class="form-group">
+                                <span class="icon-eye">
+                                    <i class="fa-solid fa-eye-slash"></i>
+                                </span>
+                                <input type="password" name="password" placeholder="Password" class="form-control" autofocus title="Es obligatorio ingresar la contraseña" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Registrarse
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/eyePassword.js') }} "></script>
+</body>
+</html>

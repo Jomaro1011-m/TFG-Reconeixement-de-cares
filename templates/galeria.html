@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face recognition</title>
+    <!--BOORTSTRAP 4-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css">
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet"> 
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }} " type="text/css">
+</head>
+<body>
+    <form action="/Galeria/Visualizar" method="post">
+        Pon el nombre de la imagen: <input type="text" name="nombre" required>
+        <input type="submit" value="Visualizar">
+    </form>
+    <div class="img_gallery">
+        {% for images in images %}
+            <h1>{{images}}</h1>
+        {% endfor %}
+    </div>
+    <a href="/Menu principal" style="color:rgb(255, 255, 255);">Pulsa aquí para volver al menú</a>
+</body>
+</html>

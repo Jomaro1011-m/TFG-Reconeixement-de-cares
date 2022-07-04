@@ -1,0 +1,9 @@
+flask
+numpy
+email
+werkzeug
+zipfile36
+Flask_Mail
+gridfs-fuse
+Flask_Pymongo
+opencv-python
